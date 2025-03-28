@@ -239,23 +239,16 @@ export default function Home() {
             }}
           />
           <Column fillWidth horizontal="center" gap="32" padding="32" position="relative">
+            <Heading wrap="balance" variant="display-default-l" align="center" marginBottom="16">
+              Milton X Sarmiento
+            </Heading>
             <InlineCode radius="xl" shadow="m" fit paddingX="16" paddingY="8">
               Start by editing
               <Text onBackground="brand-medium" marginLeft="8">
                 app/page.tsx
               </Text>
             </InlineCode>
-            <Heading wrap="balance" variant="display-default-l" align="center" marginBottom="16">
-              We let designers code and developers design
-            </Heading>
-            <Button
-              id="readDocs"
-              target="_blank"
-              label="Open docs"
-              href="https://once-ui.com/docs"
-              variant="secondary"
-              arrowIcon
-            />
+            
             <Column horizontal="center" paddingTop="64" fillWidth gap="24">
               <Line maxWidth={4} marginBottom="16" background="neutral-alpha-medium" />
               <AvatarGroup
@@ -930,9 +923,6 @@ export default function Home() {
               height: "0.25rem",
             }}
           />
-          <Row position="relative" textVariant="display-default-m" align="center">
-            Learn more
-          </Row>
         </Row>
         <Row fillWidth overflow="hidden">
           <Row maxWidth="32" borderTop="neutral-alpha-weak" borderBottom="neutral-medium"></Row>
@@ -997,11 +987,8 @@ export default function Home() {
           >
             <Logo wordmark={false} size="s" />
             <Text size="m">
-              <Text onBackground="neutral-weak">2024 /</Text> Once UI
+              <Text onBackground="neutral-weak">2025 /</Text> Once UI / Brain Solutions LLC
             </Text>
-            <SmartLink href="https://github.com/once-ui-system/nextjs-starter?tab=MIT-1-ov-file">
-              MIT License
-            </SmartLink>
           </Column>
         </Row>
       </Column>

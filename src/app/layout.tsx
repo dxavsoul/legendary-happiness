@@ -2,7 +2,7 @@ import "@/once-ui/styles/index.scss";
 import "@/once-ui/tokens/index.scss";
 
 import classNames from "classnames";
-import { headers } from "next/headers";
+// import { headers } from "next/headers";
 import { Metadata } from "next";
 
 import { baseURL, style, meta, og, schema, social } from "@/once-ui/resources/config";
@@ -37,8 +37,8 @@ const tertiary: FontConfig | undefined = undefined;
  */
 
 export async function generateMetadata(): Promise<Metadata> {
-  const host = (await headers()).get("host");
-  const metadataBase = host ? new URL(`https://${host}`) : undefined;
+  // const host = (await headers()).get("host");
+  // const metadataBase = host ? new URL(`https://${host}`) : undefined;
 
   return {
     title: meta.title,
@@ -73,7 +73,7 @@ export async function generateMetadata(): Promise<Metadata> {
 			description: og.description,
 			images: [og.image],
 		},
-    metadataBase,
+    // metadataBase,
   };
 }
 
