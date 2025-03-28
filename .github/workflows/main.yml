@@ -4,8 +4,22 @@ on:
     branches:
     - main
 jobs:
+  build:
+    runs-on: ubuntu-latest,
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ github.action_node_version }}
+    - name: Install dependencies
+      run: npm install
+    - name: Clean install dependencies and build
+      run: npm run build
   deploy:
     runs-on: ubuntu-latest
+    needs: build
     steps:
       # - name: Deploy to HostGator SSH
       #   run: |
@@ -18,16 +32,8 @@ jobs:
       #     SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
       #     SSH_KNOWN_HOSTS: ${{secrets.SSH_KNOWN_HOSTS}}
       #     SSH_KEY_PATH: ${{ github.workspace }}/../private.key 
-      - name: Checkout code
-        uses: actions/checkout@v4
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ github.action_node_version }}
-      - name: Install dependencies
-        run: npm install
-      - name: Clean install dependencies and build
-        run: npm run build
+      - name: Set Folder to copy
+        run: cd out
       - name: Sync Files
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
