@@ -37,6 +37,7 @@ import {
   Column,
   Row,
   StyleOverlay,
+  User,
 } from "@/once-ui/components";
 import { CodeBlock, MediaUpload } from "@/once-ui/modules";
 import Brain from "./brain/brain";
@@ -242,7 +243,20 @@ export default function Home() {
             <Heading wrap="balance" variant="display-default-l" align="center" marginBottom="16">
               Milton X Sarmiento
             </Heading>
-            <Text marginBottom="32" align="center" onBackground="neutral-weak">
+            <User
+              name="Milton X Sarmiento"
+              subline="Software Engineer"
+              tagProps={{
+                label: 'Pro',
+                variant: 'brand'
+              }}
+              avatarProps={{
+                empty: false,
+                src: '/images/xavier.jpg',
+                size:"xl"
+              }}
+            />
+            <Heading marginBottom="12" as="h2" align="justify" variant="heading-default-l">
               20+ years of experience in systems design and development, implementation and support of technical projects and programs
               Excel at strategic planning, building high-performance teams, multiple projects management, vendor management, best-practice methodologies implementation, and continuous improvement programs
               Expert in developing scalable and sustainable processes and tools to drive the efficiency, output and integrity of the data for financial decision-making
@@ -250,14 +264,12 @@ export default function Home() {
               Leveraged areas of expertise where I teach about them to deliver high-quality results and enhance app satisfaction
               Motivated by the challenge of creating value for clients, and product owners, while adhering to the highest standards of ethics and compliance.
               A self-starter and problem-solver who is passionate about the power of data and the next cutting-edge technologies.
-            </Text>
+            </Heading>
             <InlineCode radius="xl" shadow="m" fit paddingX="16" paddingY="8">
-              Start by editing
-              <Text onBackground="brand-medium" marginLeft="8">
-                app/page.tsx
-              </Text>
+              Resume 
+              <br />
+              <SmartLink href="resume/resume.pdf" suffixIcon="download" prefix="S" target="_black" > Milton X Sarmiento Resume</SmartLink>      
             </InlineCode>
-            
             <Column horizontal="center" paddingTop="64" fillWidth gap="24">
               <Line maxWidth={4} marginBottom="16" background="neutral-alpha-medium" />
               <AvatarGroup
@@ -274,8 +286,8 @@ export default function Home() {
                 ]}
               />
               <Heading marginBottom="12" as="h2" align="center" variant="heading-default-l">
-                Brought to you by indie creators
-                <br /> behind stellar projects:
+                Where I worked or collab
+                <br /> Projects :
               </Heading>
               <LogoCloud
                 paddingBottom="104"
@@ -287,25 +299,25 @@ export default function Home() {
                   {
                     icon: false,
                     wordmarkSrc: "/trademark/dopler-wordmark.svg",
-                    href: "https://dropler.app",
+                    href: "https://conciergerealtypartners.com",
                     size: "m",
                   },
                   {
                     icon: false,
                     wordmarkSrc: "/trademark/design-engineers-wordmark.svg",
-                    href: "https://club.dropler.io",
+                    href: "https://avwarrealty.com",
                     size: "m",
                   },
                   {
                     icon: false,
                     wordmarkSrc: "/trademark/enroll-wordmark.svg",
-                    href: "https://enroll.dopler.app",
+                    href: "https://ylift.app",
                     size: "m",
                   },
                   {
                     icon: false,
                     wordmarkSrc: "/trademark/magic-portfolio-wordmark.svg",
-                    href: "https://magic-portfolio.com",
+                    href: "https://saferidedispatch.com",
                     size: "m",
                   },
                 ]}
@@ -314,11 +326,12 @@ export default function Home() {
           </Column>
           <Column fillWidth paddingX="32" gap="12" horizontal="center" position="relative">
             <Heading as="h2" variant="display-default-m">
-              Showcase
+              Skills
             </Heading>
             <Text marginBottom="32" align="center" onBackground="neutral-weak">
               Tiny snippets to inspire your next project
             </Text>
+            
 
             {/* LOGIN */}
             <Row

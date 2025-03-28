@@ -32,7 +32,7 @@ import {
 
 import { RiVisaLine } from "react-icons/ri";
 
-import { FaDiscord, FaGithub, FaGoogle, FaLinkedin, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
+import { FaDiscord, FaDownload, FaGithub, FaGoogle, FaLinkedin, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 
 import { LuChevronsLeftRight } from "react-icons/lu";
 
@@ -70,5 +70,6 @@ export const iconLibrary: Record<string, IconType> = {
   security: HiOutlineShieldCheck,
   sparkle: HiOutlineSparkles,
   x: FaXTwitter,
-  linkedin: FaLinkedinIn
+  linkedin: FaLinkedinIn,
+  download: FaDownload
 };

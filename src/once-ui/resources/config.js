@@ -1,4 +1,4 @@
-const baseURL = "demo.once-ui.com";
+const baseURL = "mxsarmiento.brainsolutions.nyc";
 
 // default customization applied to the HTML in the main layout.tsx
 const style = {
@@ -16,15 +16,15 @@ const style = {
 
 // default metadata
 const meta = {
-  title: "Once UI - Your Personalized Design System for Next.js",
+  title: "Milton X Sarmiento - Portfolio",
   description:
-    "An open-source design system and component library for Next.js that emphasizes easy styling and accessibility in UI development.",
+    "Software Engineer and Designer based in New York City. I build delightful user  apps and experiences for the web.",
 };
 
 // default open graph data
 const og = {
-  title: "Once UI for Next.js",
-  description: "We let designers code and developers design.",
+  title: "Milton X Sarmiento Software Developer",
+  description: "",
   type: "website",
   image: "/images/cover.jpg"
 };
@@ -34,14 +34,14 @@ const schema = {
   logo: "",
   type: "Organization",
   name: "One UI",
-  description: "Once UI is an open-source design system and component library for Next.js.",
-  email: "",
+  description: "Brain Solutions is a software development company that specializes in building delightful user interfaces and experiences for the web. We are dedicated to delivering high-quality software solutions that meet the needs of our clients.",
+  email: "mxsarmiento@brainsolutions.nyc",
 };
 
 // social links
 const social = {
-  twitter: "https://www.twitter.com/_onceui",
-  linkedin: "https://www.linkedin.com/company/once-ui/",
+  twitter: "https://www.x.com/dxavsoul",
+  linkedin: "https://www.linkedin.com/in/mxsarmiento",
   discord: "https://discord.com/invite/5EyAQ4eNdS",
 };
 
