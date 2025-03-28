@@ -142,7 +142,7 @@ export default function Home() {
               variant="tertiary"
             />
             <Button
-              href="https://github.com/dxavsoul"
+              href="https://www.linkedin.com/in/mxsarmiento"
               prefixIcon="linkedin"
               size="s"
               label="LinkedIn"
@@ -242,6 +242,15 @@ export default function Home() {
             <Heading wrap="balance" variant="display-default-l" align="center" marginBottom="16">
               Milton X Sarmiento
             </Heading>
+            <Text marginBottom="32" align="center" onBackground="neutral-weak">
+              20+ years of experience in systems design and development, implementation and support of technical projects and programs
+              Excel at strategic planning, building high-performance teams, multiple projects management, vendor management, best-practice methodologies implementation, and continuous improvement programs
+              Expert in developing scalable and sustainable processes and tools to drive the efficiency, output and integrity of the data for financial decision-making
+              Led and coordinated cross-functional activities between diverse teams (Software Developers, Quality Assurance, Managing and Legal) deployed in global projects
+              Leveraged areas of expertise where I teach about them to deliver high-quality results and enhance app satisfaction
+              Motivated by the challenge of creating value for clients, and product owners, while adhering to the highest standards of ethics and compliance.
+              A self-starter and problem-solver who is passionate about the power of data and the next cutting-edge technologies.
+            </Text>
             <InlineCode radius="xl" shadow="m" fit paddingX="16" paddingY="8">
               Start by editing
               <Text onBackground="brand-medium" marginLeft="8">
