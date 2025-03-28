@@ -38,6 +38,7 @@ import {
   Row,
   StyleOverlay,
   User,
+  Badge,
 } from "@/once-ui/components";
 import { CodeBlock, MediaUpload } from "@/once-ui/modules";
 import Brain from "./brain/brain";
@@ -290,35 +291,34 @@ export default function Home() {
                 <br /> Projects :
               </Heading>
               <LogoCloud
-                paddingBottom="104"
-                columns="3"
+                columns="2"
                 mobileColumns="1"
-                limit={3}
+                limit={2}
                 fillWidth
                 logos={[
                   {
                     icon: false,
-                    wordmarkSrc: "/trademark/dopler-wordmark.svg",
+                    wordmarkSrc: "/trademark/concierge.png",
                     href: "https://conciergerealtypartners.com",
-                    size: "m",
+                    size: "xl",
                   },
                   {
                     icon: false,
-                    wordmarkSrc: "/trademark/design-engineers-wordmark.svg",
+                    wordmarkSrc: "/trademark/avwar.png",
                     href: "https://avwarrealty.com",
-                    size: "m",
+                    size: "xl",
                   },
                   {
                     icon: false,
-                    wordmarkSrc: "/trademark/enroll-wordmark.svg",
+                    wordmarkSrc: "/trademark/ylift.png",
                     href: "https://ylift.app",
-                    size: "m",
+                    size: "xl",
                   },
                   {
                     icon: false,
-                    wordmarkSrc: "/trademark/magic-portfolio-wordmark.svg",
-                    href: "https://saferidedispatch.com",
-                    size: "m",
+                    wordmarkSrc: "/trademark/clean.png",
+                    href: "https://cleanandshine.com",
+                    size: "xl",
                   },
                 ]}
               />
@@ -331,8 +331,118 @@ export default function Home() {
             <Text marginBottom="32" align="center" onBackground="neutral-weak">
               Tiny snippets to inspire your next project
             </Text>
-            
-
+            <Row>
+              <Card
+                maxWidth={24}
+                radius="l-4"
+                direction="column"
+                marginRight="20"
+              >
+                <Column
+                  fillWidth
+                  paddingX="20"
+                  paddingY="24"
+                  gap="8"
+                >
+                  <Text variant="body-default-xl">
+                    Database
+                  </Text>
+                  <Badge
+                    arrow
+                    effect
+                  >
+                    PostgreSQL
+                  </Badge>
+                  <Badge
+                    arrow
+                    effect
+                  >
+                    SQL Server
+                  </Badge>
+                  <Badge
+                    arrow
+                    effect
+                  >
+                    Oracle
+                  </Badge>
+                  <Badge
+                    arrow
+                    effect
+                  >
+                    MySQL
+                  </Badge>
+                  <Badge
+                    arrow
+                    effect
+                  >
+                    Firebase/Firestore
+                  </Badge>
+                  <Badge
+                    arrow
+                    effect
+                  >
+                    MongoDB
+                  </Badge>
+                </Column>
+                <Line background="neutral-alpha-medium" />
+                
+              </Card>
+             
+              <Card
+                maxWidth={24}
+                radius="l-4"
+                direction="column"
+              >
+                
+                <Column
+                  fillWidth
+                  paddingX="20"
+                  paddingY="24"
+                  gap="8"
+                >
+                  <Text variant="body-default-xl">
+                    Backend
+                  </Text>
+                  <Badge
+                    arrow
+                    effect
+                  >
+                    Java
+                  </Badge>
+                  <Badge
+                    arrow
+                    effect
+                  >
+                    C#.Net
+                  </Badge>
+                  <Badge
+                    arrow
+                    effect
+                  >
+                    .Net Core
+                  </Badge>
+                  <Badge
+                    arrow
+                    effect
+                  >
+                    NodeJS
+                  </Badge>
+                  <Badge
+                    arrow
+                    effect
+                  >
+                    TypeScript
+                  </Badge>
+                  <Badge
+                    arrow
+                    effect
+                  >
+                    PHP
+                  </Badge>
+                </Column>
+                <Line background="neutral-alpha-medium" />
+              </Card>
+            </Row>
             {/* LOGIN */}
             <Row
               marginY="32"
@@ -363,33 +473,35 @@ export default function Home() {
                 />
                 <Logo wordmark={false} size="l" />
                 <Heading as="h3" variant="display-default-s" align="center">
-                  Welcome to Once UI
+                  Get In Touch
                 </Heading>
                 <Text onBackground="neutral-medium" marginBottom="24">
-                  Log in or
-                  <SmartLink href="/">sign up</SmartLink>
+                  Contact 
+                  <SmartLink href="/">Information</SmartLink>
                 </Text>
                 <Column fillWidth gap="8">
                   <Button
-                    label="Continue with Google"
+                    label="Google Profile"
                     fillWidth
                     variant="secondary"
                     weight="default"
                     prefixIcon="google"
                     size="l"
+                    href="https://g.dev/dxavsoul"
                   />
                   <Button
-                    label="Continue with GitHub"
+                    label="GitHub Profile"
                     fillWidth
                     variant="secondary"
                     weight="default"
                     prefixIcon="github"
                     size="l"
+                    href="https://github.com/dxavsoul"
                   />
                 </Column>
                 <Row fillWidth paddingY="24">
                   <Row onBackground="neutral-weak" fillWidth gap="24" vertical="center">
-                    <Line />/<Line />
+                    <Line />Send a Message<Line />
                   </Row>
                 </Row>
                 <Column gap="-1" fillWidth>
@@ -432,7 +544,7 @@ export default function Home() {
         </Column>
 
         {/* PAYMENT */}
-        <Row
+        {/* <Row
           paddingX="32"
           fillWidth
           paddingY="160"
@@ -552,7 +664,7 @@ export default function Home() {
               />
             </Row>
           </Column>
-        </Row>
+        </Row> */}
 
         {/* BOOKING */}
         <Row
