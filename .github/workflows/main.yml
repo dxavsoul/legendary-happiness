@@ -7,17 +7,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      # - name: Deploy to HostGator SSH
-      #   run: |
-      #     mkdir -p ~/.ssh/
-      #     echo "$SSH_PRIVATE_KEY" > ../private.key
-      #     sudo chmod 600 ../private.key
-      #     echo "$SSH_KNOW_HOSTS" > ~/.ssh/known_hosts
-      #   shell: bash
-      #   env: 
-      #     SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
-      #     SSH_KNOWN_HOSTS: ${{secrets.SSH_KNOWN_HOSTS}}
-      #     SSH_KEY_PATH: ${{ github.workspace }}/../private.key 
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Set up Node.js
@@ -34,3 +23,16 @@ jobs:
           server: ${{ secrets.NEXTJS_SITE_SERVER }}
           username: ${{ secrets.NEXTJS_SITE_USER }}
           password: ${{ secrets.NEXTJS_SITE_PASS }}
+          local-dir: ./out/
+
+    # - name: Deploy to HostGator SSH
+      #   run: |
+      #     mkdir -p ~/.ssh/
+      #     echo "$SSH_PRIVATE_KEY" > ../private.key
+      #     sudo chmod 600 ../private.key
+      #     echo "$SSH_KNOW_HOSTS" > ~/.ssh/known_hosts
+      #   shell: bash
+      #   env: 
+      #     SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
+      #     SSH_KNOWN_HOSTS: ${{secrets.SSH_KNOWN_HOSTS}}
+      #     SSH_KEY_PATH: ${{ github.workspace }}/../private.key 
