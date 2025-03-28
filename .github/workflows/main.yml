@@ -21,7 +21,7 @@ jobs:
       - name: Clean install dependencies and build
         run: npm run build
       - name: Sync Files
-        uses: MXSarmiento/FTP-Deploy-Action@4.0.0
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           server: ${{ secrets.NEXTJS_SITE_SERVER }}
           username: ${{ secrets.NEXTJS_SITE_USER }}
