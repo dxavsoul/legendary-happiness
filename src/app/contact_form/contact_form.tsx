@@ -10,7 +10,15 @@ export default function ContactForm() {
         e.preventDefault();
         emailjs.sendForm(
             'xsarmientoMailJS', 
-            'template_2g3v0gq', form.current!, 'user_4j0v0gq')
+            'template_2g3v0gq', form.current!, {
+                publicKey: 'tcXrNK53DtsyZ5ydj'
+            }
+        ).then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        }
+        );
     } 
 
     return (        
@@ -18,7 +26,7 @@ export default function ContactForm() {
             <Grid columns={1} tabletColumns={2} gap="16" padding="12"  >
                 <Heading>Contact Us</Heading>
                 <Row>
-                    <Column>
+                    <Column >
                         <Input id="name" label="Name:" type="text" />
                     </Column>
                     <Column>
