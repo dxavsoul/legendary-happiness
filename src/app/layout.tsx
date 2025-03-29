@@ -7,6 +7,7 @@ import { Metadata } from "next";
 
 import { baseURL, style, meta, og, schema, social } from "@/once-ui/resources/config";
 import { Background, Column, Flex, ToastProvider } from "@/once-ui/components";
+import{ GoogleAnalytics } from "@next/third-parties/google";
 
 import { Inter } from "next/font/google";
 import { Roboto_Mono } from "next/font/google";
@@ -155,6 +156,7 @@ export default function RootLayout({
           {children}
         </Column>
       </ToastProvider>
+      <GoogleAnalytics gaId="G-9M5YT63E9P" />
     </Flex>
   );
 }
