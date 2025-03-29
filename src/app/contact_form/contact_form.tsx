@@ -1,4 +1,3 @@
-"use client";
 
 import { Button, Column, Flex, Grid, Heading, Input, Row, TagInput, Textarea } from "@/once-ui/components";
 import emailjs from '@emailjs/browser';
@@ -8,11 +7,11 @@ import React, { useRef, useState } from "react";
 const ContactForm = () =>{
     const [tags, setTags] = useState<string[]>(["Frontend", "Backend", "Database", "Others"]);
     
-    const sendEmail = (e) => {
+    const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         emailjs.sendForm(
             'xsarmientoMailJS', 
-            'template_dusl517', e.target, {
+            'template_dusl517', e.target as HTMLFormElement, {
                 publicKey: 'tcXrNK53DtsyZ5ydj',
             }
         ).then((result) => {
