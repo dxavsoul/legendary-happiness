@@ -44,6 +44,7 @@ import {
 } from "@/once-ui/components";
 import { CodeBlock, MediaUpload } from "@/once-ui/modules";
 import Brain from "./brain/brain";
+import ContactForm from "./contact_form/contact_form";
 
 export default function Home() {
   const [selectedValue, setSelectedValue] = useState("");
@@ -650,7 +651,7 @@ export default function Home() {
               overflow="hidden"
             >
               <Row fill hide="m">
-                <SmartImage src="/images/login.png" alt="Preview image" sizes="560px" />
+                <SmartImage src="/images/yolo.png" alt="Preview image" sizes="599px" objectFit="fill"  />
               </Row>
               <Column fillWidth horizontal="center" gap="20" padding="32" position="relative">
                 <Background
@@ -740,129 +741,6 @@ export default function Home() {
           </Column>
         </Column>
 
-        {/* PAYMENT */}
-        {/* <Row
-          paddingX="32"
-          fillWidth
-          paddingY="160"
-          gap="64"
-          position="relative"
-          mobileDirection="column"
-          vertical="center"
-        >
-          <Background
-            style={{ left: "-1px" }}
-            borderTop="neutral-alpha-medium"
-            mask={{
-              x: 0,
-              y: 50,
-              radius: 100,
-            }}
-            position="absolute"
-            grid={{
-              display: true,
-              opacity: 100,
-              width: "10%",
-              color: "neutral-alpha-medium",
-              height: "1.25%",
-            }}
-          />
-          <Row
-            position="relative"
-            shadow="xl"
-            fillWidth
-            border="neutral-alpha-medium"
-            borderStyle="dashed"
-            background="page"
-            radius="xl"
-          >
-            <TiltFx
-              aspectRatio="16 / 9"
-              fillWidth
-              radius="xl"
-              border="accent-alpha-weak"
-              overflow="hidden"
-            >
-              <HoloFx fill>
-                <Background
-                  fill
-                  position="absolute"
-                  gradient={{
-                    display: true,
-                    tilt: -45,
-                    height: 150,
-                    width: 100,
-                    x: 75,
-                    y: -50,
-                    colorStart: "brand-solid-strong",
-                    colorEnd: "accent-solid-weak",
-                  }}
-                >
-                  <Column
-                    fill
-                    position="absolute"
-                    padding="24"
-                    vertical="end"
-                    gap="12"
-                    onSolid="neutral-strong"
-                  >
-                    <Text variant="body-default-xl">Lorant One</Text>
-                    <Row
-                      fillWidth
-                      horizontal="space-between"
-                      vertical="end"
-                      paddingRight="16"
-                    >
-                      <Column gap="4">
-                        <Text variant="body-default-m">08 / 27</Text>
-                        <Text variant="body-default-m">1234 5678 1234 5678</Text>
-                      </Column>
-                      <Icon name="visa" size="xl" />
-                    </Row>
-                  </Column>
-                </Background>
-              </HoloFx>
-            </TiltFx>
-          </Row>
-          <Column position="relative" fillWidth gap="-1">
-            <Row fillWidth vertical="center" horizontal="space-between" marginBottom="32">
-              <Heading as="h3" variant="display-default-xs">
-                Fill in your card details
-              </Heading>
-              <IconButton
-                data-border="rounded"
-                variant="tertiary"
-                icon="chevronRight"
-                tooltip="Next"
-                tooltipPosition="left"
-              />
-            </Row>
-            <Input
-              id="cardnumber"
-              label="Card number"
-              labelAsPlaceholder
-              radius="top"
-              defaultValue="1234 5678 1234 5678"
-            />
-            <Row fillWidth gap="-1">
-              <Input
-                id="expiry"
-                label="Expiry date"
-                labelAsPlaceholder
-                radius="bottom-left"
-                defaultValue="08 / 27"
-              />
-              <Input
-                id="cvv"
-                label="CVV"
-                labelAsPlaceholder
-                radius="bottom-right"
-                defaultValue="123"
-              />
-            </Row>
-          </Column>
-        </Row> */}
-
         {/* BOOKING */}
         <Row
           padding="32"
@@ -946,15 +824,7 @@ export default function Home() {
               </Column>
             </Row>
             <Row fillWidth horizontal="center">
-              <DateRangePicker
-                data-scaling="110"
-                size="l"
-                fitWidth
-                gap="40"
-                mobileDirection="column"
-                onChange={(range) => setSelectedRange(range)}
-                value={selectedRange}
-              />
+              <ContactForm />
             </Row>
           </Column>
         </Row>
