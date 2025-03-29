@@ -39,6 +39,8 @@ import {
   StyleOverlay,
   User,
   Badge,
+  Flex,
+  Grid,
 } from "@/once-ui/components";
 import { CodeBlock, MediaUpload } from "@/once-ui/modules";
 import Brain from "./brain/brain";
@@ -331,7 +333,130 @@ export default function Home() {
             <Text marginBottom="32" align="center" onBackground="neutral-weak">
               Tiny snippets to inspire your next project
             </Text>
-            <Row>
+            <Grid columns={3} mobileColumns={1} tabletColumns={2} gap="16" paddingX="16" paddingY="8">
+              {/* Frontend */}
+              <Card
+                maxWidth={24}
+                radius="l-4"
+                direction="column"
+                marginRight="20"
+              >
+                <Column
+                  fillWidth
+                  paddingX="20"
+                  paddingY="24"
+                  gap="8"
+                >
+                  <Text variant="body-default-xl">
+                    Frontend
+                  </Text>
+                  <Badge
+                    arrow
+                    effect
+                  >
+                    HTML
+                  </Badge>
+                  <Badge
+                    arrow
+                    effect
+                  >
+                    Javascript
+                  </Badge>
+                  <Badge
+                    arrow
+                    effect
+                  >
+                    Next.js
+                  </Badge>
+                  <Badge
+                    arrow
+                    effect
+                  >
+                    NodeJS
+                  </Badge>
+                  <Badge
+                    arrow
+                    effect
+                  >
+                    TypeScript
+                  </Badge>
+                  <Badge
+                    arrow
+                    effect
+                  >
+                    React
+                  </Badge>
+                  <Badge
+                    arrow
+                    effect
+                  >
+                    Flutter
+                  </Badge>
+                </Column>
+                <Line background="neutral-alpha-medium" />
+              </Card>
+              {/* Backend */}             
+              <Card
+                maxWidth={30}
+                radius="l-4"
+                direction="column"
+                marginRight="20"
+              >
+                <Column
+                  fillWidth
+                  paddingX="20"
+                  paddingY="24"
+                  gap="8"
+                >
+                  <Text variant="body-default-xl">
+                    Backend
+                  </Text>
+                  <Badge
+                    arrow
+                    effect
+                  >
+                    Java
+                  </Badge>
+                  <Badge
+                    arrow
+                    effect
+                  >
+                    C#.Net
+                  </Badge>
+                  <Badge
+                    arrow
+                    effect
+                  >
+                    .Net Core
+                  </Badge>
+                  <Badge
+                    arrow
+                    effect
+                  >
+                    NodeJS
+                  </Badge>
+                  <Badge
+                    arrow
+                    effect
+                  >
+                    TypeScript
+                  </Badge>
+                  <Badge
+                    arrow
+                    effect
+                  >
+                    Dart
+                  </Badge>
+                  <Badge
+                    arrow
+                    effect
+                  >
+                    PHP
+                  </Badge>
+                </Column>
+                <Line background="neutral-alpha-medium" />
+              </Card>
+              {/* Database */}
               <Card
                 maxWidth={24}
                 radius="l-4"
@@ -383,17 +508,23 @@ export default function Home() {
                   >
                     MongoDB
                   </Badge>
+                  <Badge
+                    arrow
+                    effect
+                  >
+                    MongoDB
+                  </Badge>
                 </Column>
                 <Line background="neutral-alpha-medium" />
                 
               </Card>
-             
+              {/* DevOps */}
               <Card
                 maxWidth={24}
                 radius="l-4"
                 direction="column"
+                marginRight="20"
               >
-                
                 <Column
                   fillWidth
                   paddingX="20"
@@ -401,49 +532,115 @@ export default function Home() {
                   gap="8"
                 >
                   <Text variant="body-default-xl">
-                    Backend
+                    DevOps
                   </Text>
                   <Badge
                     arrow
                     effect
                   >
-                    Java
+                    Git
                   </Badge>
                   <Badge
                     arrow
                     effect
                   >
-                    C#.Net
+                    Docker
                   </Badge>
                   <Badge
                     arrow
                     effect
                   >
-                    .Net Core
+                    CI/CD
                   </Badge>
                   <Badge
                     arrow
                     effect
                   >
-                    NodeJS
+                    AWS
                   </Badge>
                   <Badge
                     arrow
                     effect
                   >
-                    TypeScript
+                    Azure
                   </Badge>
                   <Badge
                     arrow
                     effect
                   >
-                    PHP
+                    Linux
+                  </Badge>
+                  <Badge
+                    arrow
+                    effect
+                  >
+                    MacOS
                   </Badge>
                 </Column>
                 <Line background="neutral-alpha-medium" />
               </Card>
-            </Row>
-            {/* LOGIN */}
+              {/* Other Skills */}
+              <Card
+                maxWidth={24}
+                radius="l-4"
+                direction="column"
+              >
+                <Column
+                  fillWidth
+                  paddingX="20"
+                  paddingY="24"
+                  gap="8"
+                >
+                  <Text variant="body-default-xl">
+                    Other Skills
+                  </Text>
+                  <Badge
+                    arrow
+                    effect
+                  >
+                    Agile / Scrum Methodology
+                  </Badge>
+                  <Badge
+                    arrow
+                    effect
+                  >
+                    Odoo
+                  </Badge>
+                  <Badge
+                    arrow
+                    effect
+                  >
+                    SSRS
+                  </Badge>
+                  <Badge
+                    arrow
+                    effect
+                  >
+                    Jira
+                  </Badge>
+                  <Badge
+                    arrow
+                    effect
+                  >
+                    SOAP 
+                  </Badge>
+                  <Badge
+                    arrow
+                    effect
+                  >
+                    RESTfull
+                  </Badge>
+                  <Badge
+                    arrow
+                    effect
+                  >
+                    RabbitMQ
+                  </Badge>
+                </Column>
+                <Line background="neutral-alpha-medium" />
+              </Card>
+            </Grid>
+            {/* Contact Form */}
             <Row
               marginY="32"
               background="overlay"
