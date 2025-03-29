@@ -8,62 +8,33 @@ import {
   Button,
   Icon,
   InlineCode,
-  Logo,
-  Input,
-  Avatar,
-  AvatarGroup,
-  Textarea,
-  PasswordInput,
-  SegmentedControl,
+  Logo,  AvatarGroup,
   SmartLink,
-  Dialog,
-  Feedback,
   SmartImage,
   Line,
   LogoCloud,
   Background,
-  Select,
   useToast,
   Card,
   Fade,
-  StatusIndicator,
-  DateRangePicker,
-  DateRange,
   TiltFx,
-  HoloFx,
   IconButton,
-  TagInput,
-  Switch,
   Column,
   Row,
   StyleOverlay,
   User,
   Badge,
-  Flex,
   Grid,
   GlitchFx,
 } from "@/once-ui/components";
-import { CodeBlock, MediaUpload } from "@/once-ui/modules";
 import Brain from "./brain/brain";
 import ContactForm from "./contact_form/contact_form";
 
 export default function Home() {
-  const [selectedValue, setSelectedValue] = useState("");
-  const [selectedRange, setSelectedRange] = useState<DateRange>();
-  const [isFirstDialogOpen, setIsFirstDialogOpen] = useState(false);
-  const [isSecondDialogOpen, setIsSecondDialogOpen] = useState(false);
-  const [firstDialogHeight, setFirstDialogHeight] = useState<number>();
-  const { addToast } = useToast();
+   const { addToast } = useToast();
   const [intro, setIntro] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [tags, setTags] = useState<string[]>(["UX / UI", "Design systems", "AI / ML"]);
-  const [twoFA, setTwoFA] = useState(false);
-
-  const handleSelect = (value: string) => {
-    console.log("Selected option:", value);
-    setSelectedValue(value);
-  };
 
 
   const validateIntro = (value: React.ReactNode) => {
@@ -74,14 +45,6 @@ export default function Home() {
           Intro must be at least 10 characters long.
         </Row>
       );
-    }
-    return null;
-  };
-
-  const validateLogin = () => {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!regex.test(email)) {
-      return "Email and / or password is invalid.";
     }
     return null;
   };
@@ -113,7 +76,7 @@ export default function Home() {
         >
           {/* <Logo size="m" icon={false} href="https://once-ui.com" /> */}
           <Brain />
-          <Row gap="12" hide="s">
+          <Row gap="12" hide="m">
             <Button
               href="https://x.com/dxavsoul"
               prefixIcon="x"

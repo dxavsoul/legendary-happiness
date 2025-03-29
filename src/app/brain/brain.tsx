@@ -56,7 +56,7 @@ export default function Brain() {
     const currentLvlClass = `lvl${lvl}`;
 
   return (
-    <div style={
+    <div className="brain" style={
       {
         paddingTop: "5vh",
         display: "flex",

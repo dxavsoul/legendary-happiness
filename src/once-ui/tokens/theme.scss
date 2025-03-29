@@ -32,6 +32,14 @@
     --icon: url('/trademark/brain-dark.svg');
     --type: url('/trademark/type-dark.svg');
 
+    .brain {
+        --c0: #00000;
+        --c1: #7400b8;
+        --c2: #48bfe3;
+        --c3: #80ffdb;
+        --size: 100px;
+      }
+
     --page-background:              var(--neutral-background-weak);
     --backdrop:                     var(--static-black-medium);
 
@@ -214,6 +222,13 @@
     //--icon: url('/trademark/brain_white.svg');
     --icon: url('/trademark/brain-light.svg');
     --type: url('/trademark/type-light.svg');
+
+    .brain {
+        --c1: #7400b8;
+        --c2: #48bfe3;
+        --c3: #80ffdb;
+        --size: 100px;
+      }
 
     --page-background:              var(--neutral-background-weak);
     --backdrop:                     var(--static-white-medium);
@@ -531,3 +546,4 @@
     --brand-on-solid-strong:      var(--static-black);      
     --brand-on-solid-weak:        var(--function-brand-200);
 }
+
