@@ -29,7 +29,7 @@
 }
 
 [data-theme="dark"] {
-    --icon: url('/trademark/icon-dark.svg');
+    --icon: url('/trademark/brain-dark.svg');
     --type: url('/trademark/type-dark.svg');
 
     --page-background:              var(--neutral-background-weak);
@@ -211,7 +211,8 @@
 }
 
 [data-theme="light"] {
-    --icon: url('/trademark/icon-light.svg');
+    //--icon: url('/trademark/brain_white.svg');
+    --icon: url('/trademark/brain-light.svg');
     --type: url('/trademark/type-light.svg');
 
     --page-background:              var(--neutral-background-weak);

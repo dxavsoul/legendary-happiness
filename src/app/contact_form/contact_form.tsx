@@ -1,17 +1,19 @@
-import { Button, Column, Flex, Grid, Heading, Input, Row, Textarea } from "@/once-ui/components";
+"use client";
+
+import { Button, Column, Flex, Grid, Heading, Input, Row, TagInput, Textarea } from "@/once-ui/components";
 import emailjs from '@emailjs/browser';
-import React, { useRef } from "react";
+import exp from "constants";
+import React, { useRef, useState } from "react";
 
-export default function ContactForm() {
-
-    const form = useRef<HTMLFormElement | null>(null);
-
-    const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+const ContactForm = () =>{
+    const [tags, setTags] = useState<string[]>(["Frontend", "Backend", "Database", "Others"]);
+    
+    const sendEmail = (e) => {
         e.preventDefault();
         emailjs.sendForm(
             'xsarmientoMailJS', 
-            'template_2g3v0gq', form.current!, {
-                publicKey: 'tcXrNK53DtsyZ5ydj'
+            'template_dusl517', e.target, {
+                publicKey: 'tcXrNK53DtsyZ5ydj',
             }
         ).then((result) => {
             console.log(result.text);
@@ -22,20 +24,28 @@ export default function ContactForm() {
     } 
 
     return (        
-        <form ref={form} onSubmit={sendEmail}>
+        <form onSubmit={sendEmail}>
             <Grid columns={1} tabletColumns={2} gap="16" padding="12"  >
                 <Heading>Contact Us</Heading>
+                <Row gap="16">
+                        <Input id="name" name="name" label="Name:" type="text" />
+                        <Input id="email" name="email" label="E-mail" type="email" />
+                </Row>
                 <Row>
-                    <Column >
-                        <Input id="name" label="Name:" type="text" />
-                    </Column>
-                    <Column>
-                        <Input id="email" label="E-mail" type="email" />
-                    </Column>
+                    <TagInput
+                        id="title"
+                        name="title"
+                        value={tags}
+                        onChange={(newTags: string[]) => {
+                            setTags(newTags);
+                        }}
+                        label="Interests"
+                    />
                 </Row>
                 <Row>
                     <Textarea
-                        id="example-textarea"
+                        id="message"
+                        name="message"
                         label="Message"
                         lines={3}
                         description=""
@@ -47,3 +57,5 @@ export default function ContactForm() {
         </form>
     );
 }
+
+export default ContactForm; 
