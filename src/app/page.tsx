@@ -211,6 +211,7 @@ export default function Home() {
             />
             <Heading marginBottom="12" as="h2" align="justify" variant="heading-default-l">
               20+ years of experience in systems design and development, implementation and support of technical projects and programs
+              <br />
               Excel at strategic planning, building high-performance teams, multiple projects management, vendor management, best-practice methodologies implementation, and continuous improvement programs
               Expert in developing scalable and sustainable processes and tools to drive the efficiency, output and integrity of the data for financial decision-making
               Led and coordinated cross-functional activities between diverse teams (Software Developers, Quality Assurance, Managing and Legal) deployed in global projects
